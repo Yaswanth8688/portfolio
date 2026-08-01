@@ -1,5 +1,6 @@
 :root {
     --bg: #eef4fb;
+    --nav-height: 72px;
     --surface: #ffffff;
     --surface-soft: #f8fbff;
     --text: #0f172a;
@@ -37,16 +38,23 @@ a:hover {
 .navbar {
     background: transparent !important;
     border: none;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    z-index: 20;
-    padding: 1rem 0;
+    z-index: 1200;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    padding: 0 0; /* vertical spacing handled by height */
 }
 
 .navbar-glass {
-    background: rgba(15, 23, 42, 0.18) !important;
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.12) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.12);
 }
 
 .navbar-brand {
@@ -92,6 +100,10 @@ a:hover {
     background: linear-gradient(135deg, #091627 0%, #1b2a55 45%, #2851c8 100%);
     color: #fff;
     overflow: hidden;
+}
+
+.hero-section {
+    padding-top: calc(var(--nav-height) + 12px);
 }
 
 .hero-overlay {
@@ -530,6 +542,12 @@ a:hover {
 
     .hero-actions .btn {
         width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --nav-height: 56px;
     }
 }
 
