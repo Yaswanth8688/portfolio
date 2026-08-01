@@ -119,8 +119,8 @@ a:hover {
     gap: 0.5rem;
     padding: 0.65rem 1rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.08);
-    color: #bfdbfe;
+    background: rgba(255, 255, 255, 0.12);
+    color: #e6f0ff;
     font-size: 0.85rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
